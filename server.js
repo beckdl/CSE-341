@@ -5,6 +5,8 @@ const env = require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 const {MongoClient} = require('mongodb');
 
+// *****************************************
+
 async function main() {
   const uri = process.env.DATABASE_URL;
   
@@ -20,6 +22,8 @@ async function main() {
     await client.close();
   }
 }
+
+//******************************************
 
 main().catch(console.error);
 
