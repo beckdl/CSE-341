@@ -1,0 +1,19 @@
+// LOCALHOST TESTING URLS
+###
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts/68d41d101739c18d59239641
+###
+GET http://localhost:3000/contacts/68d5c92bb56207948141dd1d
+###
+GET http://localhost:3000/contacts/68d5c97ab56207948141dd1e
+
+// DEPLOYED TESTING URLS
+###
+GET https://cse-341-node-ootv.onrender.com/contacts
+###
+GET https://cse-341-node-ootv.onrender.com/contacts/68d41d101739c18d59239641
+###
+GET https://cse-341-node-ootv.onrender.com/contacts/68d5c92bb56207948141dd1d
+###
+GET https://cse-341-node-ootv.onrender.com/contacts/68d5c97ab56207948141dd1e

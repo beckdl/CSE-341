@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes');
+const contacts = require('./controllers/contacts');
 const env = require('dotenv').config();
 const PORT = process.env.PORT || 3000;
-const {MongoClient} = require('mongodb');
+const mongodb = require('./db/conn');
+const bodyParser = require('body-parser');
 
-// *****************************************
+/*// *****************************************
 
 async function main() {
   const uri = process.env.DATABASE_URL;
@@ -18,17 +19,23 @@ async function main() {
     console.log("Connected to MongoDB");
   } catch (e) {
     console.error(e);
-  } finally {
-    await client.close();
   }
 }
 
 //******************************************
+*/
 
-main().catch(console.error);
+app.use(bodyParser.json()).use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+}).use('/', require('./routes'));
 
-app.use('/', routes);
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+mongodb.initDb((err, mongodb) => {
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(PORT, () => {
+      console.log(`Server is running on port: ${PORT}`);
+    });
+  }
 });
