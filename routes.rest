@@ -2,18 +2,62 @@
 ###
 GET http://localhost:3000/contacts
 ###
-GET http://localhost:3000/contacts/68d41d101739c18d59239641
-###
 GET http://localhost:3000/contacts/68d5c92bb56207948141dd1d
 ###
 GET http://localhost:3000/contacts/68d5c97ab56207948141dd1e
+###
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Madison",
+    "lastName": "Anderson",
+    "email": "manderson2000@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "1992-10-25"
+}
+###
+PUT http://localhost:3000/contacts/68d5c92bb56207948141dd1d
+Content-Type: application/json
+
+{
+    "firstName": "Sharity",
+    "lastName": "Beck",
+    "email": "sharitybeck@hotmail.com",
+    "favoriteColor": "Red",
+    "birthday": "1975-02-28"
+}
+###
+DELETE http://localhost:3000/contacts/68e0126e089d2c03252bb422
 
 // DEPLOYED TESTING URLS
 ###
 GET https://cse-341-node-ootv.onrender.com/contacts
 ###
-GET https://cse-341-node-ootv.onrender.com/contacts/68d41d101739c18d59239641
-###
 GET https://cse-341-node-ootv.onrender.com/contacts/68d5c92bb56207948141dd1d
 ###
 GET https://cse-341-node-ootv.onrender.com/contacts/68d5c97ab56207948141dd1e
+###
+POST https://cse-341-node-ootv.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Madison",
+    "lastName": "Anderson",
+    "email": "manderson2000@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "1992-10-25"
+}
+###
+PUT https://cse-341-node-ootv.onrender.com/contacts/68d5c92bb56207948141dd1d
+Content-Type: application/json
+
+{
+    "firstName": "Sharity",
+    "lastName": "Beck",
+    "email": "sharitybeck@hotmail.com",
+    "favoriteColor": "Red",
+    "birthday": "1975-02-28"
+}
+###
+DELETE https://cse-341-node-ootv.onrender.com/contacts/68d5c97ab56207948141dd1e
