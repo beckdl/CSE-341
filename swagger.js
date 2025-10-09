@@ -5,7 +5,7 @@ const doc = {
         title: 'Contacts API',
         description: 'A simple CRUD API to manage contacts',
     },
-    host: 'localhost:3000',
+    host: 'cse-341-node-ootv.onrender.com',
     schemes: ['https', 'http'],
 };
 
