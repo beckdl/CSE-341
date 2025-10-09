@@ -5,8 +5,8 @@
     "description": "A simple CRUD API to manage contacts",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
-  "basePath": "/",
+  "host": "",
+  "basePath": "cse-341-node-ootv.onrender.com/",
   "schemes": [
     "https", "http"
   ],
