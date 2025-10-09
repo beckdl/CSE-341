@@ -25,12 +25,15 @@ async function main() {
 //******************************************
 */
 
-app.use(bodyParser.json()).use((req, res, next) => {
+app
+.use(bodyParser.json())
+.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
-}).use('/', require('./routes'));
+})
+.use('/', require('./routes'));
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   } else {

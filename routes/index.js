@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const baseController = require('../controllers/index');
+const contacts = require('./contacts');
 
-router.get('/', baseController.getName);
+router.use('/', require('./swagger.js'));
 
-router.use('/contacts', require('./contacts'));
+router.use('/contacts', contacts);
 
 module.exports = router;
