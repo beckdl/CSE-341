@@ -8,9 +8,20 @@
   "host": "cse-341-node-ootv.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https", "http"
+    "https",
+    "http"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/contacts/": {
       "get": {
         "description": "",
@@ -20,6 +31,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -78,6 +92,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
